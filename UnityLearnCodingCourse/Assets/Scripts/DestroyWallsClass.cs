@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class DestroyWallsClass : MonoBehaviour
 {
-    public void DestroyWalls()
+    private void OnEnable()
     {
-        Destroy(this.gameObject, 1.0f);
+        Invoke("HideWalls", 1);
+    }
+    public void HideWalls()
+    {
+        this.gameObject.SetActive(false);
+        //Destroy(this.gameObject, 1.0f);
     }
 }

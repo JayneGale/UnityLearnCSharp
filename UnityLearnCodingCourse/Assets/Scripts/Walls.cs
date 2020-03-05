@@ -11,7 +11,9 @@ public class Walls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Instantiate(_wallPrefab);
+            GameObject wall = Pool_Manager.Instance.RequestWall();
+            wall.transform.position = new Vector3(1, 5, 0);
+            //Instantiate(_wallPrefab);
         }
     }
 
