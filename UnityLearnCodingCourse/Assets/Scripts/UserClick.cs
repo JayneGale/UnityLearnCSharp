@@ -16,6 +16,7 @@ public class UserClick : MonoBehaviour
                 {
                     ICommands click = new ClickCommand(hitInfo.collider.gameObject, new Color(Random.value, Random.value, Random.value));
                     click.Execute();
+                    CommandManager.Instance.AddBuffer(click);
                     //hitInfo.collider.GetComponent<MeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value);
                 }                
             }

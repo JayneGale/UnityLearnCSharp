@@ -26,5 +26,4 @@ public class ClickCommand : ICommands
     {
         _cube.GetComponent<MeshRenderer>().material.color = _previousColour;
     }
-
 }
